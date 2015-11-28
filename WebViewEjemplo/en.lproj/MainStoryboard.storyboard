@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+    </dependencies>
+    <scenes>
+        <!--Jarroba View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="JarrobaViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="URL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Tg-8u-RbP">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="131" id="PFj-g6-5DB"/>
+                                    <constraint firstAttribute="height" constant="51" id="XDy-K4-PHk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="47"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PR7-nn-vu6">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRg-Ex-7ZS">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Ove-ce-c2x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <state key="normal" title="Ver WEB !!!">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="a7e-zy-h0i" kind="modal" identifier="pasarURL" id="d2U-MI-QpI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="PR7-nn-vu6" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="5HF-Vc-w1a"/>
+                            <constraint firstAttribute="trailing" secondItem="FRg-Ex-7ZS" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="F0k-6W-1PO"/>
+                            <constraint firstItem="9Tg-8u-RbP" firstAttribute="top" secondItem="3" secondAttribute="top" constant="107" id="MtB-Ha-gkk"/>
+                            <constraint firstItem="FRg-Ex-7ZS" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="S95-V7-BxH"/>
+                            <constraint firstAttribute="bottom" secondItem="FRg-Ex-7ZS" secondAttribute="bottom" constant="95" id="dgw-Nm-rTA"/>
+                            <constraint firstItem="PR7-nn-vu6" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="k9Q-11-m2f"/>
+                            <constraint firstItem="9Tg-8u-RbP" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="83" id="mTS-Dd-Ona"/>
+                            <constraint firstItem="PR7-nn-vu6" firstAttribute="top" secondItem="3" secondAttribute="top" constant="186" id="p5C-In-Ocm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myTextFiled" destination="PR7-nn-vu6" id="yRH-ZL-H9h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89" y="35"/>
+        </scene>
+        <!--Cweb-->
+        <scene sceneID="hvw-2U-yN0">
+            <objects>
+                <viewController id="a7e-zy-h0i" customClass="VCweb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0cq-8j-zpx">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2zI-EM-cCs">
+                                <items>
+                                    <barButtonItem title="ATRAS" id="yIB-ZF-YNg">
+                                        <color key="tintColor" red="0.0" green="0.50196081399917603" blue="0.25098040699958801" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="2" kind="modal" id="W3G-iM-ddv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KQJ-Dt-qca">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="uoF-RL-7xz">
+                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KQJ-Dt-qca" firstAttribute="leading" secondItem="0cq-8j-zpx" secondAttribute="leading" type="default" id="Au8-UF-B9p"/>
+                            <constraint firstItem="uoF-RL-7xz" firstAttribute="top" secondItem="0cq-8j-zpx" secondAttribute="top" constant="238" id="OOe-lk-wfy"/>
+                            <constraint firstItem="2zI-EM-cCs" firstAttribute="top" secondItem="0cq-8j-zpx" secondAttribute="top" type="default" id="RaB-5d-MHH"/>
+                            <constraint firstItem="KQJ-Dt-qca" firstAttribute="top" secondItem="2zI-EM-cCs" secondAttribute="bottom" type="default" id="Tui-sN-hr7"/>
+                            <constraint firstItem="2zI-EM-cCs" firstAttribute="leading" secondItem="0cq-8j-zpx" secondAttribute="leading" type="default" id="VkB-6f-VXR"/>
+                            <constraint firstItem="KQJ-Dt-qca" firstAttribute="bottom" secondItem="0cq-8j-zpx" secondAttribute="bottom" type="default" id="bOZ-J4-ng1"/>
+                            <constraint firstItem="uoF-RL-7xz" firstAttribute="centerX" secondItem="2zI-EM-cCs" secondAttribute="centerX" type="default" id="dYP-EJ-Yfz"/>
+                            <constraint firstItem="2zI-EM-cCs" firstAttribute="trailing" secondItem="0cq-8j-zpx" secondAttribute="trailing" type="default" id="her-LY-ct6"/>
+                            <constraint firstItem="KQJ-Dt-qca" firstAttribute="trailing" secondItem="0cq-8j-zpx" secondAttribute="trailing" type="default" id="yEE-38-Vzt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activity" destination="uoF-RL-7xz" id="gG6-tE-UKv"/>
+                        <outlet property="webView" destination="KQJ-Dt-qca" id="GZ5-OI-fQV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="97T-G8-FX8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="527" y="30"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="JarrobaViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/JarrobaViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="myTextFiled" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="VCweb" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VCweb.h"/>
+            <relationships>
+                <relationship kind="outlet" name="activity" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
